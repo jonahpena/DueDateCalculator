@@ -56,6 +56,9 @@ public class DueDateCalculator : IDueDateCalculator
             }
         }
 
+        // Add the minutes from the submit date to the due date.
+        dueDate = dueDate.AddMinutes(submitDate.Minute);
+
         return dueDate;
     }
 
