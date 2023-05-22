@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DueDateCalculator
-build_property.ProjectDir = /Users/jonahpena/github/DueDateCalculator/DueDateCalculator/DueDateCalculator/
+build_property.ProjectDir = /Users/jonahpena/github/testapp/DueDateCalculator/DueDateCalculator/DueDateCalculator/

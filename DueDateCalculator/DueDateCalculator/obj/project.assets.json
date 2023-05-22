@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonahpena/github/DueDateCalculator/DueDateCalculator/DueDateCalculator/DueDateCalculator.csproj",
+      "projectUniqueName": "/Users/jonahpena/github/testapp/DueDateCalculator/DueDateCalculator/DueDateCalculator/DueDateCalculator.csproj",
       "projectName": "DueDateCalculator",
-      "projectPath": "/Users/jonahpena/github/DueDateCalculator/DueDateCalculator/DueDateCalculator/DueDateCalculator.csproj",
+      "projectPath": "/Users/jonahpena/github/testapp/DueDateCalculator/DueDateCalculator/DueDateCalculator/DueDateCalculator.csproj",
       "packagesPath": "/Users/jonahpena/.nuget/packages/",
-      "outputPath": "/Users/jonahpena/github/DueDateCalculator/DueDateCalculator/DueDateCalculator/obj/",
+      "outputPath": "/Users/jonahpena/github/testapp/DueDateCalculator/DueDateCalculator/DueDateCalculator/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jonahpena/.nuget/NuGet/NuGet.Config"
