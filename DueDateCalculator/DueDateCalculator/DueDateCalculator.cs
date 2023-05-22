@@ -1,3 +1,5 @@
+using DueDateCalculator.Interfaces;
+
 namespace DueDateCalculator;
 
 public class DueDateCalculator : IDueDateCalculator
@@ -9,6 +11,7 @@ public class DueDateCalculator : IDueDateCalculator
         _workingHours = workingHours;
     }
 
+    
     public DateTime CalculateDueDate(DateTime submitDate, double turnaroundTime)
     {
         if (!_workingHours.IsWithinWorkingHours(submitDate) || _workingHours.IsWeekend(submitDate))
@@ -22,11 +25,16 @@ public class DueDateCalculator : IDueDateCalculator
         }
 
         DateTime dueDate = submitDate;
+        double hoursToAdd = 1.0;
 
         while (turnaroundTime > 0)
         {
-            dueDate = dueDate.AddHours(1);
-            turnaroundTime--;
+            if (turnaroundTime < 1.0)
+            {
+                hoursToAdd = turnaroundTime;
+            }
+            dueDate = dueDate.AddHours(hoursToAdd);
+            turnaroundTime -= hoursToAdd;
 
             if (dueDate.Hour >= _workingHours.EndHour || !_workingHours.IsWithinWorkingHours(dueDate) || _workingHours.IsWeekend(dueDate))
             {
@@ -51,9 +59,10 @@ public class DueDateCalculator : IDueDateCalculator
                 }
 
                 // Subtract the hour that was added before checking the conditions.
-                dueDate = dueDate.AddHours(-1);
-                turnaroundTime++;
+                dueDate = dueDate.AddHours(-hoursToAdd);
+                turnaroundTime += hoursToAdd;
             }
+            hoursToAdd = 1.0; // Reset the hoursToAdd after each loop
         }
 
         // Add the minutes from the submit date to the due date.
@@ -61,7 +70,4 @@ public class DueDateCalculator : IDueDateCalculator
 
         return dueDate;
     }
-
-    
-    
 }

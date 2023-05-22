@@ -1,4 +1,4 @@
-namespace DueDateCalculator;
+namespace DueDateCalculator.Interfaces;
 
 public interface IWorkingHours
 {
