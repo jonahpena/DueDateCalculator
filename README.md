@@ -3,7 +3,7 @@
 ## Table of Contents
 
 1. [Description](#description)
-2. [Technologies and Languages Used](#technologies-and-languages-used)
+2. [Technologies](#technologies)
 3. [Requirements](#requirements)
 4. [Installation](#installation)
 5. [Usage](#usage)
@@ -18,10 +18,11 @@
 This project implements a due date calculator for an issue tracking system. This calculator is designed to take a submit date/time and a turnaround time and to return the date/time when the issue is expected to be resolved, based on certain defined working hours and rules.
 
 
-## Technologies and Languages Used <a name="technologies-and-languages-used"></a>
+## Technologies <a name="technologies"></a>
 
 - C#
 - .NET 6.0
+- NUnit
 
 ## Requirements <a name="requirements"></a>
 
